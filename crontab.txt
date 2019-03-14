@@ -1,0 +1,6 @@
+*/1 * * * * sudo python2 /home/pi/watcher/get_gps_details.py > /tmp/ol.txt 2>&1
+@reboot sudo python /home/pi/watcher/stream_data.py &
+*/1 * * * * sudo /home/pi/watcher/check_app_stream.sh >> /home/pi/watcher/applog/check_app_stream.log 2>&1
+#*/1 * * * * sudo /home/pi/watcher/check_push_backup.sh >> /home/pi/watcher/applog/check_push_backup.log 2>&1
+*/1 * * * * sudo /home/pi/watcher/check_live_push.sh >> /home/pi/watcher/applog/check_live_push.log 2>&1
+*/1 * * * * sudo /home/pi/watcher/check_push_backup.sh >> /home/pi/watcher/applog/check_push_backup.log 2>&1
